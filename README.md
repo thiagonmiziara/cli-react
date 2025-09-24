@@ -293,9 +293,9 @@ Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
 ## 🔗 Links
 
-- [Repositório GitHub](https://github.com/thiagonmiziara/react-component-generator)
+- [Repositório GitHub](https://github.com/thiagonmiziara/cli-react)
 - [Pacote npm](https://www.npmjs.com/package/mizi-react-component-generator)
-- [Reportar Bug](https://github.com/thiagonmiziara/react-component-generator/issues)
+- [Reportar Bug](https://github.com/thiagonmiziara/cli-react/issues)
 
 ---
 
