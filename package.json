@@ -1,0 +1,64 @@
+{
+  "name": "mizi-react-component-generator",
+  "version": "1.0.0",
+  "description": "🚀 CLI poderosa para gerar componentes React com suporte a CSS, Styled Components, Emotion, Zustand stores, Context API e testes automatizados",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "create-react-component": "./index.js",
+    "crc": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "cli",
+    "generator",
+    "styled-components",
+    "emotion",
+    "zustand",
+    "context-api",
+    "typescript",
+    "testing",
+    "jsx",
+    "tsx",
+    "boilerplate"
+  ],
+  "author": {
+    "name": "Thiago Miziara",
+    "email": "thiagonmiziara@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thiagonmiziara/react-component-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thiagonmiziara/react-component-generator/issues"
+  },
+  "homepage": "https://github.com/thiagonmiziara/react-component-generator#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "inquirer": "^9.2.12",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "styled-components": "^5.3.11"
+  }
+}
