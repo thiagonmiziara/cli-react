@@ -34,12 +34,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thiagonmiziara/react-component-generator.git"
+    "url": "https://github.com/thiagonmiziara/cli-react"
   },
   "bugs": {
-    "url": "https://github.com/thiagonmiziara/react-component-generator/issues"
+    "url": "https://github.com/thiagonmiziara/cli-react/issues"
   },
-  "homepage": "https://github.com/thiagonmiziara/react-component-generator#readme",
+  "homepage": "https://github.com/thiagonmiziara/cli-react#readme",
   "engines": {
     "node": ">=14.0.0"
   },
