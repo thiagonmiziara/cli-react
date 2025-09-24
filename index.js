@@ -631,7 +631,7 @@ export const ${nome.toLowerCase()}Actions = {
 program
   .name("create-react-component")
   .description("🚀 CLI poderosa para gerar componentes React com suporte a CSS, Styled Components, Emotion, Zustand stores, Context API e testes")
-  .version("1.0.3", "-v, --version", "mostrar versão")
+  .version("1.0.4", "-v, --version", "mostrar versão")
   .helpOption('-h, --help', 'mostrar informações de ajuda');
 
 program
