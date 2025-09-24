@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![npm version](https://badge.fury.io/js/%40thiagonmiziara%2Freact-component-generator.svg)](https://badge.fury.io/js/%40thiagonmiziara%2Freact-component-generator)
+[![npm version](https://badge.fury.io/js/mizi-react-component-generator.svg)](https://badge.fury.io/js/mizi-react-component-generator)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)](https://nodejs.org/)
 
@@ -30,7 +30,7 @@
 
 ```bash
 # Instalar globalmente
-npm install -g @thiagonmiziara/react-component-generator
+npm install -g mizi-react-component-generator
 
 # Usar diretamente
 create-react-component --interactive
@@ -42,10 +42,10 @@ crc --interactive
 
 ```bash
 # Modo interativo
-npx @thiagonmiziara/react-component-generator --interactive
+npx mizi-react-component-generator --interactive
 
 # Modo direto
-npx @thiagonmiziara/react-component-generator Button --ts --styled
+npx mizi-react-component-generator Button --ts --styled
 ```
 
 ## 🎯 Modo Interativo
@@ -294,7 +294,7 @@ Este projeto está licenciado sob a [Licença MIT](LICENSE).
 ## 🔗 Links
 
 - [Repositório GitHub](https://github.com/thiagonmiziara/react-component-generator)
-- [Pacote npm](https://www.npmjs.com/package/@thiagonmiziara/react-component-generator)
+- [Pacote npm](https://www.npmjs.com/package/mizi-react-component-generator)
 - [Reportar Bug](https://github.com/thiagonmiziara/react-component-generator/issues)
 
 ---
