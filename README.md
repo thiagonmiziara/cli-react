@@ -70,36 +70,36 @@ crc -i
 
 ```bash
 # Componente básico
-create-react-component Button
+crc Button
 
 # TypeScript + Styled Components + Testes
-create-react-component Modal --ts --styled --test
+crc Modal --ts --styled --test
 
 # Emotion + caminho customizado
-create-react-component Card --emotion --path ./src/components
+crc Card --emotion --path ./src/components
 
 # Componente completo
-create-react-component Dashboard --ts --styled --test --path ./src/pages
+crc Dashboard --ts --styled --test --path ./src/pages
 ```
 
 ### Zustand Stores
 
 ```bash
 # Store JavaScript
-create-react-component UserStore --zustand
+crc UserStore --zustand
 
 # Store TypeScript
-create-react-component AuthStore --zustand --ts --path ./src/stores
+crc AuthStore --zustand --ts --path ./src/stores
 ```
 
 ### Context API
 
 ```bash
 # Context JavaScript
-create-react-component ThemeContext --context
+crc ThemeContext --context
 
 # Context TypeScript
-create-react-component UserContext --context --ts --path ./src/contexts
+crc UserContext --context --ts --path ./src/contexts
 ```
 
 ## 📚 Opções Disponíveis
@@ -119,6 +119,10 @@ create-react-component UserContext --context --ts --path ./src/contexts
 ## 📁 Estruturas Geradas
 
 ### Componente React (CSS)
+```bash
+# Comando para gerar:
+crc Button --test
+```
 ```
 Button/
 ├── Button.jsx
@@ -128,6 +132,10 @@ Button/
 ```
 
 ### Componente React (Styled Components)
+```bash
+# Comando para gerar:
+crc Modal --ts --styled
+```
 ```
 Modal/
 ├── Modal.tsx
@@ -137,6 +145,10 @@ Modal/
 ```
 
 ### Zustand Store
+```bash
+# Comando para gerar:
+crc UserStore --zustand --ts
+```
 ```
 UserStore/
 ├── store.ts
@@ -144,6 +156,10 @@ UserStore/
 ```
 
 ### Context API
+```bash
+# Comando para gerar:
+crc ThemeContext --context --ts
+```
 ```
 ThemeContext/
 ├── context.tsx
