@@ -69,7 +69,7 @@ ${chalk.yellow('⚠️  NOTAS IMPORTANTES:')}
   ${chalk.green('•')} Context API (${chalk.white('--context')}) cria provider, hook e actions
   ${chalk.cyan('•')} Modo interativo (${chalk.white('--interactive')}) guia você através de todas as opções
 
-${chalk.cyan('🔗 Para mais informações, visite:')} ${chalk.underline('https://github.com/thiagonmiziara/react-component-generator')}
+${chalk.cyan('🔗 Para mais informações, visite:')} ${chalk.underline('https://github.com/thiagonmiziara/cli-react')}
 `)
   .action(async (nome, options) => {
     let componentOptions;
