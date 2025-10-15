@@ -6,12 +6,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)](https://nodejs.org/)
 
-**Uma CLI poderosa para gerar componentes React com suporte completo a CSS, Styled Components, Emotion, Zustand stores, Context API e testes automatizados**
+**Uma CLI poderosa para gerar componentes React e projetos completos com Vite, shadcn/ui, React Query, Zustand, Axios e muito mais!**
 
 </div>
 
 ## ✨ Características
 
+### 🎨 Geração de Componentes
 - 🎯 **Modo Interativo**: Interface guiada com perguntas intuitivas
 - ⚛️ **Componentes React**: JSX/TSX com estrutura completa
 - 🏪 **Zustand Stores**: Gerenciamento de estado com actions pré-definidas
@@ -22,7 +23,61 @@
 - 🔷 **TypeScript**: Suporte completo com tipagem
 - 🧪 **Testes**: Arquivos de teste com React Testing Library
 - 📁 **Caminhos Customizados**: Crie em qualquer diretório
-- 🎨 **Interface Bonita**: Terminal colorido com emojis
+
+### 🚀 Criação de Projetos Completos
+- 📦 **React + Vite**: Setup completo e otimizado
+- 🎨 **shadcn/ui**: Componentes UI modernos com Tailwind CSS
+- 🔄 **React Query**: Gerenciamento de estado do servidor com exemplos
+- 🏪 **Zustand**: Stores com persist e devtools
+- 🌐 **Axios**: Services configurados com interceptors
+- ✅ **Zod**: Validação de schemas e tipos
+- 📚 **Exemplos Práticos**: Código funcional e documentado
+- 🎯 **Estrutura Organizada**: Pastas e arquivos bem estruturados
+
+## 🎯 Modos de Uso
+
+### 1. Modo Interativo - Componentes
+
+O modo interativo guia você através de todas as opções:
+
+```bash
+create-react-component --interactive
+# ou
+crc -i
+```
+
+**O que você pode criar:**
+- ⚛️ **Componente React** - Componente completo com estilos e testes
+- 🏪 **Store Zustand** - Store com actions e tipagem completa
+- 🎯 **Context API** - Provider, reducer e hooks customizados
+
+### 2. Modo Projeto - Criar Projeto Completo
+
+Crie um projeto React + Vite completo com todas as configurações:
+
+```bash
+create-react-component --project
+# ou
+crc --project
+```
+
+**O que é criado:**
+- ✅ React + Vite configurado
+- ✅ TypeScript (opcional)
+- ✅ shadcn/ui + Tailwind CSS (opcional)
+- ✅ Componentes shadcn selecionados
+- ✅ Pacotes adicionais (Zustand, React Query, Axios, Zod, React Router)
+- ✅ Estrutura de pastas organizada (components, pages, hooks, stores, services, etc)
+- ✅ **Exemplos práticos** dos pacotes selecionados
+- ✅ Configuração de path aliases (@/)
+- ✅ Git inicializado (opcional)
+
+**Exemplos automáticos criados:**
+- 📦 **Zustand**: Stores com persist e devtools
+- 🌐 **Axios**: Services com interceptors e tratamento de erros
+- 🔄 **React Query**: Hooks customizados com cache
+- ✅ **Zod**: Schemas de validação
+- 📄 **Página de exemplos**: Componente funcional mostrando tudo
 
 ## 📦 Instalação
 
@@ -36,6 +91,9 @@ npm install -g mizi-react-component-generator
 create-react-component --interactive
 # ou
 crc --interactive
+
+# Criar projeto completo
+crc --project
 ```
 
 ### Uso com npx (Sem Instalação)
@@ -44,25 +102,12 @@ crc --interactive
 # Modo interativo
 npx mizi-react-component-generator --interactive
 
+# Criar projeto
+npx mizi-react-component-generator --project
+
 # Modo direto
 npx mizi-react-component-generator Button --ts --styled
 ```
-
-## 🎯 Modo Interativo
-
-O modo interativo guia você através de todas as opções disponíveis:
-
-```bash
-create-react-component --interactive
-# ou
-crc -i
-```
-
-### O que você pode criar:
-
-1. **⚛️ Componente React** - Componente completo com estilos e testes
-2. **🏪 Store Zustand** - Store com actions e tipagem completa
-3. **🎯 Context API** - Provider, reducer e hooks customizados
 
 ## 🛠️ Uso por Linha de Comando
 
@@ -104,9 +149,18 @@ crc UserContext --context --ts --path ./src/contexts
 
 ## 📚 Opções Disponíveis
 
+### Comandos Principais
+
+| Comando | Descrição |
+|---------|-----------|
+| `--interactive` ou `-i` | Modo interativo para criar componentes |
+| `--project` | Criar projeto React + Vite completo |
+| `--help` ou `-h` | Mostrar ajuda |
+
+### Opções para Componentes
+
 | Opção | Alias | Descrição |
 |-------|-------|-----------|
-| `--interactive` | `-i` | Modo interativo com perguntas |
 | `--typescript` | `-t` | Gerar arquivos TypeScript |
 | `--styled` | `-s` | Usar Styled Components |
 | `--emotion` | `-e` | Usar Emotion |
@@ -114,13 +168,84 @@ crc UserContext --context --ts --path ./src/contexts
 | `--context` | `-c` | Criar Context API |
 | `--test` | | Incluir arquivos de teste |
 | `--path <caminho>` | `-p` | Caminho onde criar |
-| `--help` | `-h` | Mostrar ajuda |
+
+## 🎨 Exemplos de Uso
+
+### Criar Projeto Completo
+
+```bash
+# Modo interativo - escolha todas as opções
+crc --project
+
+# Exemplo do que você pode configurar:
+# - Nome do projeto: my-app
+# - TypeScript: Sim
+# - shadcn/ui: Sim
+# - Componentes: button, card, dialog
+# - Pacotes: zustand, @tanstack/react-query, axios, zod
+# - Git: Sim
+```
+
+**Resultado:**
+```
+my-app/
+├── src/
+│   ├── components/
+│   │   └── ui/           # Componentes shadcn
+│   ├── pages/
+│   │   └── ExampleUsage.tsx  # Exemplos práticos
+│   ├── hooks/
+│   │   └── useUsers.ts   # Hooks React Query
+│   ├── stores/
+│   │   ├── userStore.ts  # Store com persist
+│   │   └── todoStore.ts  # Store com devtools
+│   ├── services/
+│   │   ├── api.ts        # Configuração Axios
+│   │   └── userService.ts # Service com Zod
+│   └── lib/
+│       ├── utils.ts      # Utilidades
+│       └── queryClient.ts # Config React Query
+├── EXAMPLES.md           # Documentação dos exemplos
+└── ...
+```
 
 ## 📁 Estruturas Geradas
 
+### Projeto Completo
+
+Ao criar um projeto com `--project`, você recebe:
+
+```
+my-project/
+├── public/
+├── src/
+│   ├── components/
+│   │   └── ui/              # Componentes shadcn/ui
+│   ├── pages/
+│   │   └── ExampleUsage.tsx # Exemplos de uso dos pacotes
+│   ├── hooks/               # Custom hooks (React Query, etc)
+│   ├── stores/              # Zustand stores
+│   ├── services/            # Axios services
+│   ├── contexts/            # React contexts
+│   ├── types/               # TypeScript types
+│   ├── utils/               # Utilidades
+│   ├── lib/                 # Configurações e helpers
+│   ├── assets/              # Imagens, fonts, etc
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+├── components.json          # Config shadcn/ui
+├── tailwind.config.js
+├── tsconfig.json
+├── vite.config.ts
+├── package.json
+├── EXAMPLES.md              # 📚 Documentação dos exemplos
+└── README.md
+```
+
 ### Componente React (CSS)
 ```bash
-# Comando para gerar:
+# Comando:
 crc Button --test
 ```
 ```
@@ -128,12 +253,12 @@ Button/
 ├── Button.jsx
 ├── Button.css
 ├── index.js
-└── Button.test.jsx (opcional)
+└── Button.test.jsx
 ```
 
 ### Componente React (Styled Components)
 ```bash
-# Comando para gerar:
+# Comando:
 crc Modal --ts --styled
 ```
 ```
@@ -141,12 +266,12 @@ Modal/
 ├── Modal.tsx
 ├── styled.ts
 ├── index.ts
-└── Modal.test.tsx (opcional)
+└── Modal.test.tsx
 ```
 
 ### Zustand Store
 ```bash
-# Comando para gerar:
+# Comando:
 crc UserStore --zustand --ts
 ```
 ```
@@ -157,7 +282,7 @@ UserStore/
 
 ### Context API
 ```bash
-# Comando para gerar:
+# Comando:
 crc ThemeContext --context --ts
 ```
 ```
@@ -166,86 +291,143 @@ ThemeContext/
 └── index.tsx
 ```
 
-## 🎨 Exemplos de Código Gerado
+## 💡 Exemplos Automáticos nos Projetos
 
-### Componente React com Styled Components (TypeScript)
+Quando você seleciona pacotes como **Zustand**, **React Query**, **Axios** ou **Zod**, 
+o CLI automaticamente cria arquivos de exemplo funcionais!
 
-```tsx
-import React from "react";
-import { Container } from "./styled";
+### 🏪 Zustand Store
 
-export const Button = () => {
-  return (
-    <Container>
-      <h1>Button component</h1>
-    </Container>
-  );
-};
-```
-
-### Zustand Store (TypeScript)
+**Arquivo:** `src/stores/userStore.ts`
 
 ```tsx
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
+
+interface User {
+  id: string;
+  name: string;
+  email: string;
+}
 
 interface UserState {
-  count: number;
-  text: string;
-  isLoading: boolean;
+  user: User | null;
+  isAuthenticated: boolean;
+  theme: 'light' | 'dark';
   
-  increment: () => void;
-  decrement: () => void;
-  updateText: (text: string) => void;
-  setLoading: (loading: boolean) => void;
-  reset: () => void;
+  setUser: (user: User) => void;
+  logout: () => void;
+  toggleTheme: () => void;
 }
 
-export const useUserStore = create<UserState>()((set) => ({
-  count: 0,
-  text: '',
-  isLoading: false,
-  
-  increment: () => set((state) => ({ count: state.count + 1 })),
-  decrement: () => set((state) => ({ count: state.count - 1 })),
-  updateText: (text: string) => set({ text }),
-  setLoading: (isLoading: boolean) => set({ isLoading }),
-  reset: () => set({ count: 0, text: '', isLoading: false }),
-}));
+export const useUserStore = create<UserState>()(
+  persist(
+    (set) => ({
+      user: null,
+      isAuthenticated: false,
+      theme: 'light',
+
+      setUser: (user) => set({ user, isAuthenticated: true }),
+      logout: () => set({ user: null, isAuthenticated: false }),
+      toggleTheme: () =>
+        set((state) => ({
+          theme: state.theme === 'light' ? 'dark' : 'light',
+        })),
+    }),
+    { name: 'user-storage' }
+  )
+);
 ```
 
-### Context API (TypeScript)
+### 🌐 Axios Service
+
+**Arquivo:** `src/services/userService.ts`
 
 ```tsx
-import React, { createContext, useContext, useReducer, ReactNode } from 'react';
+import { api } from './api';
+import { z } from 'zod';
 
-interface ThemeState {
-  count: number;
-  text: string;
-  isLoading: boolean;
+// Schema Zod para validação
+export const userSchema = z.object({
+  id: z.string().uuid(),
+  name: z.string().min(3),
+  email: z.string().email(),
+});
+
+export type User = z.infer<typeof userSchema>;
+
+export const userService = {
+  getAll: async (): Promise<User[]> => {
+    const response = await api.get<User[]>('/users');
+    return response.data;
+  },
+
+  getById: async (id: string): Promise<User> => {
+    const response = await api.get<User>(`/users/${id}`);
+    return userSchema.parse(response.data);
+  },
+
+  create: async (data: CreateUserDto): Promise<User> => {
+    const validatedData = createUserSchema.parse(data);
+    const response = await api.post<User>('/users', validatedData);
+    return userSchema.parse(response.data);
+  },
+};
+```
+
+### 🔄 React Query Hook
+
+**Arquivo:** `src/hooks/useUsers.ts`
+
+```tsx
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { userService } from '@/services/userService';
+
+export const userKeys = {
+  all: ['users'] as const,
+  lists: () => [...userKeys.all, 'list'] as const,
+  detail: (id: string) => [...userKeys.all, 'detail', id] as const,
+};
+
+export function useUsers() {
+  return useQuery({
+    queryKey: userKeys.lists(),
+    queryFn: userService.getAll,
+    staleTime: 5 * 60 * 1000,
+  });
 }
 
-type ThemeAction =
-  | { type: 'INCREMENT' }
-  | { type: 'DECREMENT' }
-  | { type: 'UPDATE_TEXT'; payload: string };
+export function useCreateUser() {
+  const queryClient = useQueryClient();
 
-export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [state, dispatch] = useReducer(themeReducer, initialState);
+  return useMutation({
+    mutationFn: (data: CreateUserDto) => userService.create(data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: userKeys.lists() });
+      console.log('✅ Usuário criado!');
+    },
+  });
+}
+```
 
-  return (
-    <ThemeContext.Provider value={{ state, dispatch }}>
-      {children}
-    </ThemeContext.Provider>
-  );
-};
+### 📄 Página de Exemplos
 
-export const useThemeContext = (): ThemeContextType => {
-  const context = useContext(ThemeContext);
-  if (context === undefined) {
-    throw new Error('useThemeContext deve ser usado dentro de um ThemeProvider');
-  }
-  return context;
-};
+**Arquivo:** `src/pages/ExampleUsage.tsx`
+
+Uma página completa mostrando:
+- Como usar os Zustand stores
+- Como fazer queries com React Query
+- Como criar/atualizar/deletar dados
+- Integração entre todos os pacotes
+
+**Para ver os exemplos em ação:**
+```tsx
+// No seu App.tsx
+import { ExampleUsage } from './pages/ExampleUsage';
+
+function App() {
+  return <ExampleUsage />;
+}
 ```
 
 ## 🎯 Como Usar os Componentes Gerados
@@ -253,20 +435,57 @@ export const useThemeContext = (): ThemeContextType => {
 ### Importação Simples
 ```tsx
 import { Button } from './Button';
-import { useUserStore } from './stores/UserStore';
+import { useUserStore } from './stores/userStore';
 import { ThemeProvider, useThemeContext } from './contexts/ThemeContext';
 ```
 
 ### Usando Zustand Store
 ```tsx
 function MyComponent() {
-  const { count, increment, decrement } = useUserStore();
+  const { user, setUser, logout } = useUserStore();
   
   return (
     <div>
-      <p>Count: {count}</p>
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
+      {user ? (
+        <>
+          <p>Olá, {user.name}!</p>
+          <button onClick={logout}>Sair</button>
+        </>
+      ) : (
+        <button onClick={() => setUser({ id: '1', name: 'João', email: 'joao@email.com' })}>
+          Login
+        </button>
+      )}
+    </div>
+  );
+}
+```
+
+### Usando React Query
+```tsx
+import { useUsers, useCreateUser } from '@/hooks/useUsers';
+
+function UsersList() {
+  const { data: users, isLoading, error } = useUsers();
+  const createUser = useCreateUser();
+  
+  if (isLoading) return <div>Carregando...</div>;
+  if (error) return <div>Erro: {error.message}</div>;
+  
+  return (
+    <div>
+      {users?.map(user => (
+        <div key={user.id}>{user.name}</div>
+      ))}
+      <button 
+        onClick={() => createUser.mutate({ 
+          name: 'Maria', 
+          email: 'maria@email.com',
+          password: '123456'
+        })}
+      >
+        Adicionar Usuário
+      </button>
     </div>
   );
 }
@@ -293,6 +512,65 @@ function MyComponent() {
   );
 }
 ```
+
+## 🚀 Começando Rapidamente
+
+### 1. Criar um Projeto Completo
+
+```bash
+# Instalar CLI globalmente
+npm install -g mizi-react-component-generator
+
+# Criar projeto
+crc --project
+
+# Responder as perguntas interativas:
+# - Nome: my-awesome-app
+# - TypeScript: Sim
+# - shadcn/ui: Sim
+# - Componentes: button, card, input
+# - Pacotes: zustand, @tanstack/react-query, axios, zod, react-router-dom
+# - Git: Sim
+
+# Navegar e iniciar
+cd my-awesome-app
+npm run dev
+```
+
+### 2. Ver os Exemplos
+
+```tsx
+// Edite src/App.tsx
+import { ExampleUsage } from './pages/ExampleUsage';
+
+function App() {
+  return <ExampleUsage />;
+}
+
+export default App;
+```
+
+### 3. Criar Componentes Adicionais
+
+```bash
+# Criar um novo componente
+crc ProductCard --ts --styled --test
+
+# Criar um novo store
+crc CartStore --zustand --ts --path ./src/stores
+
+# Criar um novo context
+crc AuthContext --context --ts
+```
+
+## 📖 Documentação Adicional
+
+Após criar um projeto, você terá acesso a:
+
+- **EXAMPLES.md**: Documentação completa dos exemplos criados
+- **README.md**: Instruções do projeto
+- Exemplos funcionais em `src/pages/ExampleUsage.tsx`
+- Código comentado e bem estruturado
 
 ## ⚙️ Requisitos
 

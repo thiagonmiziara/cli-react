@@ -1,7 +1,7 @@
 {
   "name": "mizi-react-component-generator",
-  "version": "1.0.6",
-  "description": "🚀 CLI poderosa para gerar componentes React com suporte a CSS, Styled Components, Emotion, Zustand stores, Context API e testes automatizados",
+  "version": "1.1.0",
+  "description": "🚀 CLI poderosa para gerar componentes React, criar projetos completos com Vite + shadcn/ui, e suporte a CSS, Styled Components, Emotion, Zustand stores, Context API e testes automatizados",
   "main": "index.js",
   "type": "module",
   "bin": {
@@ -14,6 +14,10 @@
   },
   "keywords": [
     "react",
+    "vite",
+    "shadcn",
+    "shadcn-ui",
+    "tailwindcss",
     "components",
     "cli",
     "generator",
@@ -25,7 +29,8 @@
     "testing",
     "jsx",
     "tsx",
-    "boilerplate"
+    "boilerplate",
+    "project-generator"
   ],
   "author": {
     "name": "Thiago Miziara",
@@ -45,6 +50,7 @@
   },
   "files": [
     "index.js",
+    "src/",
     "README.md",
     "LICENSE"
   ],
@@ -52,7 +58,6 @@
     "chalk": "^5.3.0",
     "commander": "^11.0.0",
     "inquirer": "^9.2.12",
-    "mizi-react-component-generator": "^1.0.6",
     "zustand": "^5.0.8"
   },
   "devDependencies": {
