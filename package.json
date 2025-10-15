@@ -1,6 +1,6 @@
 {
   "name": "mizi-react-component-generator",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "🚀 CLI poderosa para gerar componentes React, criar projetos completos com Vite + shadcn/ui, e suporte a CSS, Styled Components, Emotion, Zustand stores, Context API e testes automatizados",
   "main": "index.js",
   "type": "module",
