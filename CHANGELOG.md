@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.1.1] - 2025-11-04
+
+### 🔧 Correções
+- Fix: Atualização forçada do cache npm para garantir visibilidade da v2.1.0
+- Melhoria na propagação das atualizações no registry npm
+
 ## [2.1.0] - 2025-11-04
 
 ### ✨ Nova Funcionalidade Principal
