@@ -34,6 +34,15 @@
 - 📚 **Exemplos Práticos**: Código funcional e documentado
 - 🎯 **Estrutura Organizada**: Pastas e arquivos bem estruturados
 
+### ⚡ Clone de Boilerplate Next.js
+- 🎯 **Clone Automático**: Clone do boilerplate Next.js completo
+- 📝 **Personalização**: Nome do projeto customizável
+- 🗑️ **Limpeza Git**: Remove histórico original (opcional)
+- 📦 **Auto Install**: Instala dependências automaticamente
+- 🆚 **VS Code**: Abre no VS Code após criação
+- 📚 **Git Novo**: Inicializa repositório limpo
+- ⚡ **Pronto para Usar**: Estrutura profissional completa
+
 ## 🎯 Modos de Uso
 
 ### 1. Modo Interativo - Componentes
@@ -78,6 +87,26 @@ crc --project
 - 🔄 **React Query**: Hooks customizados com cache
 - ✅ **Zod**: Schemas de validação
 - 📄 **Página de exemplos**: Componente funcional mostrando tudo
+
+### 3. Modo Boilerplate Next.js - Clone Completo
+
+Clone um boilerplate Next.js profissional pronto para produção:
+
+```bash
+create-react-component --nextjs
+# ou
+crc --nextjs
+```
+
+**Boilerplate incluído:**
+- ✅ Next.js 14+ com App Router
+- ✅ TypeScript configurado
+- ✅ Tailwind CSS + shadcn/ui
+- ✅ ESLint + Prettier
+- ✅ Estrutura profissional organizada
+- ✅ Configurações de produção
+- ✅ Componentes pré-construídos
+- ✅ Pronto para deploy
 
 ## 📦 Instalação
 
@@ -174,16 +203,25 @@ crc UserContext --context --ts --path ./src/contexts
 ### Criar Projeto Completo
 
 ```bash
-# Modo interativo - escolha todas as opções
+# Criar projeto completo
 crc --project
 
-# Exemplo do que você pode configurar:
+# Clonar boilerplate Next.js
+crc --nextjs
+
+# Exemplo do que você pode configurar no projeto React:
 # - Nome do projeto: my-app
 # - TypeScript: Sim
 # - shadcn/ui: Sim
 # - Componentes: button, card, dialog
 # - Pacotes: zustand, @tanstack/react-query, axios, zod
 # - Git: Sim
+
+# Exemplo do que você pode configurar no Next.js:
+# - Nome do projeto: my-nextjs-app
+# - Instalar deps: Sim
+# - Abrir VS Code: Sim
+# - Remover Git history: Sim
 ```
 
 **Resultado:**
@@ -521,7 +559,7 @@ function MyComponent() {
 # Instalar CLI globalmente
 npm install -g mizi-react-component-generator
 
-# Criar projeto
+# Criar projeto React + Vite
 crc --project
 
 # Responder as perguntas interativas:
@@ -537,7 +575,24 @@ cd my-awesome-app
 npm run dev
 ```
 
-### 2. Ver os Exemplos
+### 2. Clonar Boilerplate Next.js
+
+```bash
+# Clonar boilerplate profissional
+crc --nextjs
+
+# Responder as perguntas:
+# - Nome: my-nextjs-project
+# - Instalar deps: Sim
+# - Abrir VS Code: Sim
+# - Remover Git history: Sim
+
+# Navegar e iniciar
+cd my-nextjs-project
+npm run dev
+```
+
+### 3. Ver os Exemplos (React + Vite)
 
 ```tsx
 // Edite src/App.tsx
@@ -550,7 +605,7 @@ function App() {
 export default App;
 ```
 
-### 3. Criar Componentes Adicionais
+### 4. Criar Componentes Adicionais
 
 ```bash
 # Criar um novo componente

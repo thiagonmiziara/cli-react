@@ -1,7 +1,7 @@
 {
   "name": "mizi-react-component-generator",
-  "version": "2.0.0",
-  "description": "🚀 CLI poderosa para gerar componentes React, criar projetos completos com Vite + shadcn/ui, e suporte a CSS, Styled Components, Emotion, Zustand stores, Context API e testes automatizados",
+  "version": "2.1.0",
+  "description": "🚀 CLI poderosa para gerar componentes React, criar projetos completos com Vite + shadcn/ui, clonar boilerplates Next.js e suporte a CSS, Styled Components, Emotion, Zustand stores, Context API e testes automatizados",
   "main": "index.js",
   "type": "module",
   "bin": {
@@ -14,6 +14,7 @@
   },
   "keywords": [
     "react",
+    "nextjs",
     "vite",
     "shadcn",
     "shadcn-ui",
@@ -30,7 +31,9 @@
     "jsx",
     "tsx",
     "boilerplate",
-    "project-generator"
+    "project-generator",
+    "nextjs-boilerplate",
+    "clone"
   ],
   "author": {
     "name": "Thiago Miziara",

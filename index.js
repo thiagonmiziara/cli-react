@@ -5,13 +5,14 @@ import chalk from "chalk";
 import { interactiveMode } from "./src/interactive.js";
 import { createComponent } from "./src/creator.js";
 import { createProject } from "./src/project-creator.js";
+import { cloneNextjsBoilerplate } from "./src/nextjs-cloner.js";
 
 const program = new Command();
 
 program
   .name("create-react-component")
-  .description("🚀 CLI poderosa para gerar componentes React com suporte a CSS, Styled Components, Emotion, Zustand stores, Context API e testes")
-  .version("1.1.0")
+  .description("🚀 CLI poderosa para gerar componentes React, criar projetos completos e clonar boilerplates")
+  .version("2.1.0")
   .helpOption('-h, --help', 'mostrar informações de ajuda');
 
 program
@@ -25,6 +26,7 @@ program
   .option("-z, --zustand", "Gerar store Zustand", false)
   .option("-c, --context", "Gerar Context API", false)
   .option("--project", "Criar projeto React + Vite completo", false)
+  .option("--nextjs", "Clonar boilerplate Next.js completo", false)
   .addHelpText('before', `
 ${chalk.cyan('╔══════════════════════════════════════════════════════════════╗')}
 ${chalk.cyan('║')}  ${chalk.bold.white('🎨 CLI React Components Generator')}                           ${chalk.cyan('║')}
@@ -35,6 +37,7 @@ ${chalk.cyan('╚═════════════════════
 ${chalk.yellow('💡 EXEMPLOS DE USO:')}
   ${chalk.green('$')} ${chalk.white('create-react-component --interactive')}            ${chalk.gray('# 🎯 Modo interativo com perguntas')}
   ${chalk.green('$')} ${chalk.white('create-react-component --project')}                ${chalk.gray('# 🚀 Criar projeto React + Vite completo')}
+  ${chalk.green('$')} ${chalk.white('create-react-component --nextjs')}                 ${chalk.gray('# ⚡ Clonar boilerplate Next.js')}
   ${chalk.green('$')} ${chalk.white('create-react-component -i')}                       ${chalk.gray('# 🎯 Modo interativo (alias)')}
   ${chalk.green('$')} ${chalk.white('create-react-component Button')}                    ${chalk.gray('# 📄 Componente básico na raiz')}
   ${chalk.green('$')} ${chalk.white('create-react-component Modal --ts')}                ${chalk.gray('# 🔷 Componente TypeScript')}
@@ -53,6 +56,15 @@ ${chalk.yellow('� CRIAR PROJETO COMPLETO:')}
     ${chalk.gray('• Pacotes adicionais (React Router, Zustand, Axios, etc)')}
     ${chalk.gray('• Git inicializado (opcional)')}
 
+${chalk.yellow('⚡ BOILERPLATE NEXT.JS:')}
+  ${chalk.blue('--nextjs')}   ${chalk.gray('Clona boilerplate Next.js completo com:')}
+    ${chalk.gray('• Next.js 14+ com App Router')}
+    ${chalk.gray('• TypeScript + Tailwind CSS')}
+    ${chalk.gray('• shadcn/ui componentes')}
+    ${chalk.gray('• ESLint + Prettier configurados')}
+    ${chalk.gray('• Estrutura profissional')}
+    ${chalk.gray('• Pronto para produção')}
+
 ${chalk.cyan('🔗 Para mais informações, visite:')} ${chalk.underline('https://github.com/thiagonmiziara/cli-react')}
 `)
   .action(async (nome, options) => {
@@ -65,6 +77,13 @@ ${chalk.cyan('🔗 Para mais informações, visite:')} ${chalk.underline('https:
       await createProject(componentOptions);
       return;
     }
+    // Se modo Next.js boilerplate - vai direto para clone
+    if (options.nextjs) {
+      const { nextjsBoilerplateMode } = await import('./src/interactive.js');
+      componentOptions = await nextjsBoilerplateMode();
+      await cloneNextjsBoilerplate(componentOptions);
+      return;
+    }
     
     // Se modo interativo ou não há nome fornecido
     if (options.interactive || !nome) {
@@ -73,6 +92,12 @@ ${chalk.cyan('🔗 Para mais informações, visite:')} ${chalk.underline('https:
       // Se escolheu criar projeto
       if (componentOptions.fileType === 'project') {
         await createProject(componentOptions);
+        return;
+      }
+      
+      // Se escolheu clonar boilerplate Next.js
+      if (componentOptions.fileType === 'nextjs-boilerplate') {
+        await cloneNextjsBoilerplate(componentOptions);
         return;
       }
     } else {

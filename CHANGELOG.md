@@ -1,5 +1,52 @@
 # Changelog
 
+## [2.1.0] - 2025-11-04
+
+### ✨ Nova Funcionalidade Principal
+
+#### ⚡ Clone de Boilerplate Next.js
+- Novo comando `--nextjs` para clonar boilerplate Next.js completo
+- Repositório: https://github.com/thiagonmiziara/boileerplate-next
+- **Funcionalidades:**
+  - Clone automático do repositório
+  - Personalização do nome do projeto
+  - Remoção opcional do histórico Git original
+  - Instalação automática de dependências (opcional)
+  - Abertura no VS Code após criação (opcional)
+  - Inicialização de novo repositório Git
+  - Atualização automática do package.json
+
+#### 🎯 Modo Interativo Expandido
+- Nova opção "⚡ Boilerplate Next.js (Clone)" no modo interativo
+- Interface guiada para configuração do boilerplate
+- Perguntas intuitivas para todas as opções
+
+#### 📦 Boilerplate Incluído
+**Next.js 14+ completo com:**
+- TypeScript configurado
+- Tailwind CSS
+- shadcn/ui componentes
+- ESLint + Prettier
+- Estrutura profissional organizada
+- Pronto para produção
+
+### 🔧 Melhorias
+- Versão atualizada para 2.1.0
+- Novos comandos no help
+- Descrição expandida do CLI
+- Keywords atualizadas no package.json
+
+### 💻 Como Usar
+
+```bash
+# Modo direto
+create-react-component --nextjs
+
+# Modo interativo
+create-react-component --interactive
+# Escolher: ⚡ Boilerplate Next.js (Clone)
+```
+
 ## [2.0.0] - 2025-10-15
 
 ### ✨ Novidades Principais

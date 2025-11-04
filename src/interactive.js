@@ -21,7 +21,8 @@ export async function interactiveMode() {
         { name: '⚛️  Componente React', value: 'component' },
         { name: '🏪 Store Zustand', value: 'store' },
         { name: '🎯 Context API', value: 'context' },
-        { name: '🚀 Projeto React + Vite', value: 'project' }
+        { name: '🚀 Projeto React + Vite', value: 'project' },
+        { name: '⚡ Boilerplate Next.js (Clone)', value: 'nextjs-boilerplate' }
       ],
       default: 'component'
     }
@@ -30,6 +31,11 @@ export async function interactiveMode() {
   // Se for criar um projeto completo
   if (typeAnswer.fileType === 'project') {
     return await projectMode();
+  }
+
+  // Se for clonar o boilerplate Next.js
+  if (typeAnswer.fileType === 'nextjs-boilerplate') {
+    return await nextjsBoilerplateMode();
   }
 
   // Perguntas comuns
@@ -202,5 +208,58 @@ export async function projectMode() {
     shadcnComponents: answers.shadcnComponents || [],
     additionalPackages: answers.additionalPackages || [],
     initGit: answers.initGit
+  };
+}
+
+/**
+ * Modo para clonar boilerplate Next.js
+ */
+export async function nextjsBoilerplateMode() {
+  console.log(chalk.cyan('\n⚡ Configuração do Boilerplate Next.js\n'));
+  console.log(chalk.gray('📦 Boilerplate completo com Next.js, TypeScript, Tailwind, shadcn/ui e muito mais!'));
+  console.log(chalk.gray('🔗 Repositório: https://github.com/thiagonmiziara/boileerplate-next\n'));
+  
+  const answers = await inquirer.prompt([
+    {
+      type: 'input',
+      name: 'projectName',
+      message: '📝 Nome do projeto (pasta que será criada):',
+      default: 'my-nextjs-app',
+      validate: (input) => {
+        if (!input || input.trim() === '') {
+          return '❌ O nome do projeto é obrigatório!';
+        }
+        if (!/^[a-z0-9-_]+$/.test(input.trim())) {
+          return '❌ Use apenas letras minúsculas, números, hífens e underscores!';
+        }
+        return true;
+      }
+    },
+    {
+      type: 'confirm',
+      name: 'installDependencies',
+      message: '📦 Instalar dependências automaticamente após o clone?',
+      default: true
+    },
+    {
+      type: 'confirm',
+      name: 'openInVscode',
+      message: '🆚 Abrir projeto no VS Code após criação?',
+      default: false
+    },
+    {
+      type: 'confirm',
+      name: 'removeGitHistory',
+      message: '🗑️  Remover histórico Git do boilerplate? (recomendado)',
+      default: true
+    }
+  ]);
+
+  return {
+    fileType: 'nextjs-boilerplate',
+    projectName: answers.projectName.trim(),
+    installDependencies: answers.installDependencies,
+    openInVscode: answers.openInVscode,
+    removeGitHistory: answers.removeGitHistory
   };
 }
