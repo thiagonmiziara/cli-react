@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "bin": {
-    "create-react-component": "./index.js",
-    "crc": "./index.js"
+    "create-react-component": "index.js",
+    "crc": "index.js"
   },
   "scripts": {
     "start": "node index.js",
@@ -42,7 +42,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thiagonmiziara/cli-react"
+    "url": "git+https://github.com/thiagonmiziara/cli-react.git"
   },
   "bugs": {
     "url": "https://github.com/thiagonmiziara/cli-react/issues"
