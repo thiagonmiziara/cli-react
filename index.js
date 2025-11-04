@@ -12,7 +12,7 @@ const program = new Command();
 program
   .name("create-react-component")
   .description("🚀 CLI poderosa para gerar componentes React, criar projetos completos e clonar boilerplates")
-  .version("2.1.0")
+  .version("2.1.1")
   .helpOption('-h, --help', 'mostrar informações de ajuda');
 
 program
